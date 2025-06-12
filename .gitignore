@@ -1,0 +1,44 @@
+# Konfigurasi dan File Sensitif
+# Jangan pernah menyimpan kredensial database di Git.
+# Buat file template (misal: database.example.php) dan abaikan file aslinya.
+/config/database.php
+
+# Folder Dependensi
+# Folder ini dibuat oleh Composer dan bisa diinstal ulang dengan `composer install`.
+/vendor/
+
+# File Log
+# Log dibuat saat runtime dan tidak boleh dimasukkan ke version control.
+/logs/
+*.log
+
+# File yang Dihasilkan oleh Skrip (Artifacts)
+# Model, data dummy, dan file sementara tidak perlu disimpan, karena bisa dibuat ulang.
+*.pkl
+# *.sql
+*.phar
+# Abaikan semua file .json, KECUALI composer.json
+*.json
+!composer.json
+# composer.lock penting untuk menjaga konsistensi versi library
+!composer.lock
+
+# File Data Mentah & Excel
+# Sebaiknya tidak menyimpan file data besar di Git.
+*.xlsx
+*.xls
+
+# File Installer & Setup
+# File ini hanya digunakan sekali untuk setup awal.
+composer-setup.php
+
+# File yang Dihasilkan dari Proses Debugging Kita
+/test.txt
+/output.txt
+/data_in_*.json
+
+# File spesifik OS dan Editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

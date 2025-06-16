@@ -16,7 +16,7 @@ try:
 except FileNotFoundError:
     model = None
     model_columns = None
-    print("WARNING: model.pkl atau model_columns.pkl tidak ditemukan. Endpoint /predict tidak akan berfungsi.")
+    print("WARNING: svm_model.pkl atau model_columns.pkl tidak ditemukan. Endpoint /predict tidak akan berfungsi.")
 
 @app.route('/predict', methods=['POST'])
 def predict():

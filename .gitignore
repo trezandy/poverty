@@ -1,7 +1,7 @@
 # Konfigurasi dan File Sensitif
 # Jangan pernah menyimpan kredensial database di Git.
 # Buat file template (misal: database.example.php) dan abaikan file aslinya.
-/config/database.php
+# /config/database.php
 
 # Folder Dependensi
 # Folder ini dibuat oleh Composer dan bisa diinstal ulang dengan `composer install`.
